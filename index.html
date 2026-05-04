@@ -42,4 +42,73 @@
   </script>
 </head>
 
-  
+<body class="font-body bg-cream min-h-screen flex flex-col">
+
+  <!-- ===================== BACKGROUND DECORATION ===================== -->
+  <div class="bg-blob blob-1" aria-hidden="true"></div>
+  <div class="bg-blob blob-2" aria-hidden="true"></div>
+
+  <!-- ===================== HALAMAN LOGIN ===================== -->
+  <div id="auth-page" class="min-h-screen flex items-center justify-center px-4 relative z-10">
+    <div class="w-full max-w-sm">
+
+      <!-- Logo -->
+      <div class="text-center mb-8">
+        <h1 class="font-display text-5xl text-ink leading-tight">
+          Bek<span class="text-accent">Tu</span>Woe
+        </h1>
+        <p class="mt-2 text-muted text-sm">Catat tugasmu. Selesaikan satu per satu. ✦</p>
+      </div>
+
+      <!-- Tab Toggle Login / Register -->
+      <div class="flex bg-white border border-gray-100 rounded-2xl p-1 mb-6 shadow-sm">
+        <button id="tab-login" onclick="switchTab('login')"
+          class="flex-1 py-2 rounded-xl text-sm font-semibold transition-all duration-200 tab-active">
+          Masuk
+        </button>
+        <button id="tab-register" onclick="switchTab('register')"
+          class="flex-1 py-2 rounded-xl text-sm font-semibold transition-all duration-200 tab-inactive">
+          Daftar
+        </button>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white border border-gray-100 rounded-3xl shadow-md p-6">
+
+        <!-- ---- FORM LOGIN ---- -->
+        <div id="form-login">
+          <h2 class="font-display text-2xl text-ink mb-5">Selamat datang!</h2>
+
+          <div id="login-error" class="auth-error hidden"></div>
+
+          <div class="flex flex-col gap-4">
+            <div class="input-group">
+              <label class="input-label">Email</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope input-icon"></i>
+                <input id="login-email" type="email" placeholder="nama@email.com" class="auth-input" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Password</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input id="login-password" type="password" placeholder="Masukkan password" class="auth-input" />
+                <button type="button" onclick="togglePassword('login-password', this)" class="eye-btn">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <button onclick="handleLogin()"
+              class="btn-primary mt-1">
+              <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i>Masuk
+            </button>
+          </div>
+
+          <p class="text-center text-xs text-muted mt-4">
+            Belum punya akun?
+            <button onclick="switchTab('register')" class="text-accent font-semibold hover:underline">Daftar di sini</button>
+          </p>
+        </div>
