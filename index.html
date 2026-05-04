@@ -264,4 +264,38 @@
         </div>
       </section>
 
+      <!-- ---- FILTER / STATISTIK ---- -->
+      <section aria-label="Statistik dan Filter" class="mt-6 flex items-center justify-between">
+        <div class="flex gap-2">
+          <button data-filter="all"    class="filter-btn active-filter">Semua</button>
+          <button data-filter="active" class="filter-btn">Aktif</button>
+          <button data-filter="done"   class="filter-btn">Selesai</button>
+        </div>
+        <span id="task-count" class="text-xs text-muted font-medium">0 tugas tersisa</span>
+      </section>
+
+      <!-- ---- TODO LIST ---- -->
+      <section aria-label="Daftar Tugas" class="mt-4">
+        <ul id="todo-list" class="flex flex-col gap-3">
+          <!-- Task items akan muncul di sini via JS -->
+        </ul>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="text-center py-16 hidden">
+          <div class="text-5xl mb-4">📋</div>
+          <p class="text-muted text-sm font-medium">Belum ada tugas.<br/>Yuk tambahkan sesuatu!</p>
+        </div>
+      </section>
+
+      <!-- ---- CLEAR COMPLETED ---- -->
+      <div class="mt-6 flex justify-end">
+        <button id="clear-done-btn"
+          class="text-xs text-muted hover:text-accent underline underline-offset-2 transition-colors duration-200 hidden"
+          onclick="clearDone()">
+          Hapus semua yang selesai
+        </button>
+      </div>
+
+    </main>
+
 
