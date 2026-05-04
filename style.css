@@ -1,0 +1,428 @@
+/* =========================================================
+   BekTuWoe – style.css
+   Custom styles yang melengkapi Tailwind CSS
+   ========================================================= */
+
+/* ----- CSS Variables / Design Tokens ----- */
+:root {
+  --cream:  #FAF7F2;
+  --ink:    #1A1A2E;
+  --accent: #E8633A;
+  --done:   #4CAF82;
+  --muted:  #9B8EA0;
+}
+
+/* ----- Reset & Base ----- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ----- Background Blob Decorations ----- */
+.bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #E8633A55, #f9a88055);
+  top: -120px;
+  right: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #9B8EA044, #c9b8d044);
+  bottom: -80px;
+  left: -80px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-20px) scale(1.05); }
+}
+
+/* ----- Typography ----- */
+h1.font-display {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* =========================================================
+   AUTH — Login & Register Styles
+   ========================================================= */
+
+/* Tab Buttons */
+.tab-active {
+  background-color: var(--accent);
+  color: white;
+  box-shadow: 0 2px 10px rgba(232, 99, 58, 0.3);
+}
+
+.tab-inactive {
+  background-color: transparent;
+  color: var(--muted);
+}
+
+.tab-inactive:hover {
+  color: var(--ink);
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Input Wrapper — ikon di kiri */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+/* Auth Input */
+.auth-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem 0.7rem 2.25rem;
+  border-radius: 0.85rem;
+  border: 1.5px solid #e8e4de;
+  background: #fdfcfb;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232, 99, 58, 0.12);
+  background: #fff;
+}
+
+.auth-input::placeholder {
+  color: #c8c2bc;
+}
+
+/* Datetime input styling */
+.deadline-input {
+  padding-right: 0.9rem;
+  cursor: pointer;
+}
+
+/* Eye toggle button */
+.eye-btn {
+  position: absolute;
+  right: 0.75rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.eye-btn:hover {
+  color: var(--ink);
+}
+
+/* Primary Button */
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(232, 99, 58, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d45530;
+  box-shadow: 0 6px 24px rgba(232, 99, 58, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Auth Error / Success */
+.auth-error {
+  padding: 0.65rem 0.9rem;
+  background: #fef2f0;
+  border: 1.5px solid #fca99a;
+  border-radius: 0.75rem;
+  color: #c0392b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.auth-success {
+  padding: 0.65rem 0.9rem;
+  background: #f0faf5;
+  border: 1.5px solid #a8dfc4;
+  border-radius: 0.75rem;
+  color: #27784d;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   TODO — Add Button
+   ========================================================= */
+.btn-add-task {
+  box-shadow: 0 4px 18px rgba(232, 99, 58, 0.35);
+}
+
+.btn-add-task:hover {
+  box-shadow: 0 6px 24px rgba(232, 99, 58, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ----- Filter Buttons ----- */
+.filter-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid #e5e7eb;
+  background: white;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.active-filter {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white !important;
+  box-shadow: 0 2px 10px rgba(232, 99, 58, 0.3);
+}
+
+/* =========================================================
+   TODO — Item Card
+   ========================================================= */
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  background: white;
+  border: 1.5px solid #f0ede8;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: all 0.25s ease;
+  animation: slideIn 0.3s ease both;
+}
+
+.todo-item:hover {
+  border-color: #e0dbd5;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Tugas selesai: sedikit redup */
+.todo-done {
+  background: #fdfcfb;
+  border-color: #ece9e3;
+  opacity: 0.75;
+}
+
+/* Mata Kuliah Badge */
+.matkul-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  background: rgba(232, 99, 58, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(232, 99, 58, 0.2);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Deadline Badges */
+.deadline-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.deadline-badge.overdue {
+  background: #fef2f0;
+  color: #c0392b;
+  border: 1px solid #fca99a;
+}
+
+.deadline-badge.urgent {
+  background: #fff7e6;
+  color: #d97706;
+  border: 1px solid #fcd34d;
+  animation: pulse-soft 1.5s ease-in-out infinite;
+}
+
+.deadline-badge.soon {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.65; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----- Custom Checkbox Styling ----- */
+.custom-checkbox {
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.custom-checkbox:hover {
+  transform: scale(1.15);
+}
+
+/* ----- Delete Button ----- */
+.delete-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+/* ----- Input Focus Ring ----- */
+input:focus {
+  outline: none;
+}
+
+/* ----- Empty State ----- */
+#empty-state {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ----- Scrollbar (opsional, untuk browser Webkit) ----- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6cfc8;
+  border-radius: 999px;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   - Mobile:  default (< 640px)
+   - Tablet:  sm: (≥ 640px)
+   - Desktop: md: (≥ 768px)
+   ========================================================= */
+
+/* Mobile: lebih kompak */
+@media (max-width: 640px) {
+  .blob-1 { width: 250px; height: 250px; }
+  .blob-2 { width: 200px; height: 200px; }
+
+  .todo-item {
+    padding: 0.75rem 0.85rem;
+  }
+
+  /* Tampilkan delete button selalu di mobile (tidak perlu hover) */
+  .delete-btn {
+    opacity: 1;
+  }
+
+  .matkul-badge {
+    max-width: 160px;
+  }
+}
+
+/* Tablet ke atas: sedikit lebih lebar */
+@media (min-width: 640px) {
+  .todo-item {
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* Desktop: tambahan kenyamanan visual */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+}
