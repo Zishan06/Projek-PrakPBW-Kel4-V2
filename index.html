@@ -176,3 +176,36 @@
       </p>
     </div>
   </div>
+
+
+  <!-- ===================== HALAMAN TO-DO LIST ===================== -->
+  <div id="app-page" class="hidden flex-col min-h-screen">
+
+    <!-- ---- HEADER ---- -->
+    <header class="pt-10 pb-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white border border-gray-100 rounded-full px-4 py-1.5 shadow-sm mb-5">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        <span class="text-xs font-medium text-muted tracking-widest uppercase">Aktif Sekarang</span>
+      </div>
+
+      <h1 class="font-display text-5xl md:text-6xl text-ink leading-tight">
+        Bek<span class="text-accent">Tu</span>Woe
+      </h1>
+      <p class="mt-2 text-muted text-sm md:text-base max-w-xs mx-auto">
+        Catat tugasmu. Selesaikan satu per satu. ✦
+      </p>
+
+      <!-- User Info + Logout -->
+      <div class="mt-4 inline-flex items-center gap-3 bg-white border border-gray-100 rounded-full px-4 py-2 shadow-sm">
+        <div class="w-7 h-7 rounded-full bg-accent/10 flex items-center justify-center">
+          <i class="fa-regular fa-user text-accent text-xs"></i>
+        </div>
+        <span id="user-greeting" class="text-sm font-medium text-ink"></span>
+        <button onclick="handleLogout()"
+          class="text-xs text-muted hover:text-accent transition-colors duration-200 flex items-center gap-1">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Keluar</span>
+        </button>
+      </div>
+    </header>
+
