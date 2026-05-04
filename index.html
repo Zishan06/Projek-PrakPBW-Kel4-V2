@@ -112,3 +112,67 @@
             <button onclick="switchTab('register')" class="text-accent font-semibold hover:underline">Daftar di sini</button>
           </p>
         </div>
+
+
+        <!-- ---- FORM REGISTER ---- -->
+        <div id="form-register" class="hidden">
+          <h2 class="font-display text-2xl text-ink mb-5">Buat akun baru</h2>
+
+          <div id="register-error" class="auth-error hidden"></div>
+          <div id="register-success" class="auth-success hidden"></div>
+
+          <div class="flex flex-col gap-4">
+            <div class="input-group">
+              <label class="input-label">Nama Lengkap</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-user input-icon"></i>
+                <input id="reg-name" type="text" placeholder="Nama kamu" class="auth-input" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Email</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope input-icon"></i>
+                <input id="reg-email" type="email" placeholder="nama@email.com" class="auth-input" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Password</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input id="reg-password" type="password" placeholder="Min. 6 karakter" class="auth-input" />
+                <button type="button" onclick="togglePassword('reg-password', this)" class="eye-btn">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Konfirmasi Password</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input id="reg-confirm" type="password" placeholder="Ulangi password" class="auth-input" />
+              </div>
+            </div>
+
+            <button onclick="handleRegister()"
+              class="btn-primary mt-1">
+              <i class="fa-solid fa-user-plus mr-2"></i>Daftar Sekarang
+            </button>
+          </div>
+
+          <p class="text-center text-xs text-muted mt-4">
+            Sudah punya akun?
+            <button onclick="switchTab('login')" class="text-accent font-semibold hover:underline">Masuk di sini</button>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer kecil -->
+      <p class="text-center text-xs text-gray-300 mt-6">
+        Dibuat dengan ☕ oleh <span class="text-accent font-semibold">Kelompok 4</span> · PrakPBW
+      </p>
+    </div>
+  </div>
