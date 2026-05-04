@@ -209,3 +209,59 @@
       </div>
     </header>
 
+     <!-- ---- MAIN ---- -->
+    <main class="flex-1 w-full max-w-2xl mx-auto px-4 py-8 relative z-10">
+
+      <!-- ---- INPUT FORM BARU (3 kolom) ---- -->
+      <section aria-label="Tambah Tugas Baru">
+        <div class="bg-white border border-gray-100 rounded-3xl shadow-md p-5">
+          <h2 class="font-display text-base text-ink mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-plus-circle text-accent"></i>
+            Tambah Tugas Baru
+          </h2>
+
+          <!-- Baris 1: Mata Kuliah + Nama Tugas -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+            <div class="input-group">
+              <label class="input-label">Mata Kuliah</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-book-open input-icon"></i>
+                <input id="todo-matkul" type="text" placeholder="cth. Pemrograman Web"
+                  class="auth-input" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Nama Tugas</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-pen-to-square input-icon"></i>
+                <input id="todo-task" type="text" placeholder="cth. Buat halaman login"
+                  class="auth-input" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Baris 2: Deadline + Tombol Tambah -->
+          <div class="flex gap-3 items-end">
+            <div class="input-group flex-1">
+              <label class="input-label">Deadline</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-calendar input-icon"></i>
+                <input id="todo-deadline" type="datetime-local" class="auth-input deadline-input" />
+              </div>
+            </div>
+
+            <button onclick="addTask()"
+              class="btn-add-task flex-shrink-0 h-11 px-5 rounded-2xl bg-accent text-white
+                     flex items-center gap-2 shadow-md
+                     hover:bg-opacity-90 active:scale-95 transition-all duration-200 mb-0.5">
+              <i class="fa-solid fa-plus text-sm"></i>
+              <span class="text-sm font-semibold hidden sm:inline">Tambah</span>
+            </button>
+          </div>
+
+          <div id="form-error" class="auth-error hidden mt-3"></div>
+        </div>
+      </section>
+
+
