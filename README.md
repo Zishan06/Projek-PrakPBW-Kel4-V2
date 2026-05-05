@@ -1,71 +1,50 @@
-# Projek-PrakPBW-Kel4-V2
+# 📋 BekTuWoe - To-Do List App
+
+> *"Catat tugasmu. Selesaikan satu per satu. ✦"*
+
+![Version](https://img.shields.io/badge/version-2.0.0-orange?style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 ---
 
-# 📝 BekTuWoe: Minimalist To-Do List
+## ✨ **Fitur Unggulan**
 
-Selamat datang di **BekTuWoe**! Sebuah aplikasi pencatatan tugas sederhana nan cepat yang dibangun khusus untuk fokus pada sisi *frontend*. Proyek ini dirancang untuk memaksimalkan produktivitas dengan antarmuka yang bersih dan responsif.
-
-
-
-## 🚀 Fitur Utama
-*   ✨ **Desain Modern:** Menggunakan Tailwind CSS untuk tampilan yang *clean*.
-*   📱 **Fully Responsive:** Nyaman digunakan di HP, Tablet, maupun Desktop.
-*   ⚡ **Interaktif:** Tambah, coret, dan hapus tugas secara instan.
-*   🎨 **Custom Themes:** Skema warna yang memanjakan mata.
-
----
-
-## 🛠️ Stack Teknologi
-Proyek ini murni menggunakan teknologi *frontend* untuk kecepatan dan efisiensi:
-
-| Komponen | Teknologi |
-| :--- | :--- |
-| **Markup** | HTML5 |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
-| **Logic** | JavaScript (Vanilla) |
-| **Icons** | Heroicons / FontAwesome |
+| Fitur | Deskripsi |
+|-------|-----------|
+| 🔐 **Autentikasi** | Login & Register (tersimpan di LocalStorage) |
+| 📚 **Mata Kuliah** | Dropdown dengan emoji custom + bisa tambah sendiri |
+| ⏰ **Time Picker** | Default hari ini, cukup pilih jam pengerjaan |
+| 📝 **Deskripsi + Checklist** | Dukungan format checklist dengan `-` di awal baris |
+| 🔔 **Pengingat Otomatis** | Notifikasi browser + alert saat waktu tugas tiba |
+| 🎯 **Filter Tugas** | Semua / Aktif / Selesai / Hari Ini |
+| ✏️ **Edit & Hapus** | Kelola tugas dengan mudah |
+| 📱 **Responsive** | Tampilan optimal di desktop & mobile |
 
 ---
 
-## 📋 Alur Kerja (Workflow)
+## 🎨 **Tech Stack**
 
+<div align="center">
 
+| Teknologi | Penggunaan |
+|-----------|------------|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="24"/> **HTML5** | Struktur halaman |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="24"/> **TailwindCSS** | Styling utility-first |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="24"/> **JavaScript** | Logika aplikasi |
+| <i class="fa-brands fa-css3"></i> **CSS3** | Animasi & efek custom |
+| <i class="fa-brands fa-font-awesome"></i> **Font Awesome** | Ikon-ikon kece |
+| <i class="fa-brands fa-google"></i> **Google Fonts** | Syne + DM Sans |
 
-
-### 5. Deployment 🌐
-Mengunggah hasil akhir ke platform hosting statis seperti **GitHub Pages**, **Vercel**, atau **Netlify**.
+</div>
 
 ---
 
-## 📸 Tampilan Proyek
-> [!TIP]
-> Masukkan screenshot atau GIF demo aplikasi kamu di sini agar orang lain tertarik!
+## 🚀 **Cara Menjalankan**
 
----
-
-## ⚙️ Cara Menjalankan Secara Lokal
-
-Jika kamu ingin mencoba mengembangkannya sendiri, ikuti langkah ini:
-
-1.  **Clone Repositori**
-    ```bash
-    git clone https://github.com/username/todo-list-tailwind.git
-    ```
-2.  **Masuk ke Direktori**
-    
+### 📦 **Clone Repository**
 ```bash
-    cd todo-list-tailwind
-    ```
-3.  **Buka file `index.html`**
-    Cukup klik dua kali pada file atau gunakan ekstensi *Live Server* di VS Code.
-
----
-
-## 🤝 Kontribusi
-Punya ide untuk fitur baru? Silakan *fork* repositori ini dan kirimkan *Pull Request*! 🚀
-
----
-
-
-```
+git clone https://github.com/username/bektuwoe.git
+cd bektuwoe
