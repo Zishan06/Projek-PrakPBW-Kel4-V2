@@ -426,3 +426,114 @@ input:focus {
     font-size: 1rem;
   }
 }
+
+/* =========================================================
+   EKSTRA STYLE UNTUK FITUR BARU
+   ========================================================= */
+
+/* Styling untuk select dropdown */
+select.auth-input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239B8EA0'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+/* Styling untuk textarea */
+textarea.auth-input {
+  min-height: 70px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Checklist di dalam deskripsi task */
+.task-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.task-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding: 0.2rem 0;
+}
+
+.task-checklist li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-checklist input[type="checkbox"] {
+  width: 0.9rem;
+  height: 0.9rem;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+/* Badge untuk mata kuliah dengan emoji */
+.matkul-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(232, 99, 58, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(232, 99, 58, 0.2);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Animasi untuk notifikasi */
+@keyframes notificationGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(232, 99, 58, 0.4);
+    border-color: var(--accent);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(232, 99, 58, 0);
+    border-color: #ff8866;
+  }
+}
+
+.todo-notification {
+  animation: notificationGlow 1s ease-in-out 3;
+  background: linear-gradient(135deg, #fff8f5, white);
+}
+
+/* Badge waktu */
+.time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  background: #f0f0f0;
+  color: var(--ink);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .matkul-badge {
+    max-width: 140px;
+  }
+
+  .task-checklist li {
+    font-size: 0.7rem;
+  }
+}
