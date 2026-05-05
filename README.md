@@ -1,3 +1,4 @@
+<img width="2783" height="3457" alt="deepseek_mermaid_20260505_965c8a" src="https://github.com/user-attachments/assets/633d6ec0-e9d5-4a6e-9621-59e947533789" />
 # 📋 BekTuWoe - To-Do List App
 
 > *"Catat tugasmu. Selesaikan satu per satu. ✦"*
